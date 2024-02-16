@@ -10,17 +10,7 @@ class Medio : public Jugador{
         int dribleHability;
         int passHability;
     public:
-        Medio(string name, int team){
-            this->name = name;
-            this->team = team;
-            this->position = 2;
-            this->dribleHability = generarRandom;
-            this->passHability = generarRandom;
-        }
-        void drible(){
-
-        }
-        void pass(){
-            
-        }
+        Medio(string name, int team);
+        int drible();
+        int pass();
 };

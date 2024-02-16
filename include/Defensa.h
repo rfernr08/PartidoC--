@@ -10,17 +10,7 @@ class Defensa : public Jugador{
         int tackleHability;
         int passHability;
     public:
-        Defensa(string name, int team){
-            this->name = name;
-            this->team = team;
-            this->position = 2;
-            this->tackleHability = generarRandom;
-            this->passHability = 0;
-        }
-        void tackle(){
-
-        }
-        void pass(){
-            
-        }
+        Defensa(string name, int team);
+        int tackle();
+        int pass();
 };

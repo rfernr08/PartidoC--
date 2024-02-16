@@ -10,13 +10,7 @@ class Portero : public Jugador{
         int saveHability;
         int passHability;
     public:
-        Portero(string name, int team){
-            
-        }
-        void save(){
-
-        }
-        void pass(){
-            
-        }
+        Portero(string name, int team);
+        int save();
+        int pass();
 };

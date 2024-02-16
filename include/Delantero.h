@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include "Jugador.h"
 
 class Delantero : public Jugador{
     private:
@@ -10,17 +10,7 @@ class Delantero : public Jugador{
         int shootHability;
         int dribleHability;
     public:
-        Delantero(string name, int team){
-            this->name = name;
-            this->team = team;
-            this->position = 4;
-            this->shootHability = generarRandom;
-            this->dribleHability = generarRandom;
-        }                                   
-        void shoot(){
-
-        }
-        void dribble(){
-
-        }
+        Delantero(string name, int team);                                  
+        int shoot();
+        int dribble();
 };
