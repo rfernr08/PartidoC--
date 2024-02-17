@@ -7,6 +7,7 @@ class Portero : public Jugador{
         string name;
         int team;
         int position;
+        bool hasBall;
         int saveHability;
         int passHability;
     public:

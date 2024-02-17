@@ -11,5 +11,6 @@ class Equipo {
         vector<Jugador> jugadores;
         vector<Partido> partidos;
     public: 
-        Equipo(string name, Mister mister, vector<Jugador> jugadores, vector<Partido> partidos)
+        Equipo(string name, Mister mister, vector<Jugador> jugadores, vector<Partido> partidos);
+        void getTeamGames();
 };

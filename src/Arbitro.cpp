@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void Arbitro::shootAtGoal(Delantero striker, Portero goalkeeper)
+void Arbitro::shootAtGoal(Jugador striker, Jugador goalkeeper)
 {
     if (striker.shoot() > goalkeeper.save())
     {
@@ -44,7 +44,7 @@ void Arbitro::dribblePlayer(Jugador player1, Jugador player2)
     }
 }
 
-void Arbitro::tacklePlayer(Medio player1, Jugador player2)
+void Arbitro::tacklePlayer(Jugador player1, Jugador player2)
 {
     if (player1.tackle() > player2.pass())
     {

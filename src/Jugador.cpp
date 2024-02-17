@@ -13,3 +13,11 @@ void Jugador::recibirBalon(){
 void Jugador::dejarBalon(){
     this->hasBall = false;
 }
+
+int Jugador::getPosition(){
+    return this->position;
+}
+
+int Jugador::getTeam(){
+    return this->team;
+}

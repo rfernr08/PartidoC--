@@ -7,6 +7,7 @@ class Medio : public Jugador{
         string name;
         int team;
         int position;
+        bool hasBall;
         int dribleHability;
         int passHability;
     public:

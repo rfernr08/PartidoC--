@@ -7,6 +7,7 @@ class Defensa : public Jugador{
         string name;
         int team;
         int position;
+        bool hasBall;
         int tackleHability;
         int passHability;
     public:
