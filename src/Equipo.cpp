@@ -2,15 +2,15 @@
 #include <string>
 #include <vector>
 #include "Equipo.h"
+#include "Mister.h"
 
-Equipo::Equipo(string name, Mister mister, vector<Jugador> jugadores, vector<Partido> partidos){
+Equipo::Equipo(string name, Mister mister, vector<Partido> partidos){
     this->name_ = name;
     this->mister = mister;
-    this->jugadores = checkPositions(jugadores);
     this->partidos = partidos;
 }
 
-vector<Jugador> checkPositions(vector<Jugador> jugadores){
+void Equipo::checkPositions(vector<Jugador> jugadores){
     vector<Jugador> jugadores_ = jugadores;
     bool hasPortero = false;
     bool hasDefensa = false;
@@ -31,16 +31,15 @@ vector<Jugador> checkPositions(vector<Jugador> jugadores){
         }
     }
     if(hasPortero && hasDefensa && hasMedio && hasDelantero){
-        return jugadores;
+        this->jugadores = jugadores_;
     }
     else{
         cout << "El equipo no tiene las posiciones necesarias" << endl;
-        return {};
     }
 }
 
 void Equipo::getTeamGames(){
     for(int i = 0; i < partidos.size(); i++){
-        cout << partidos[i].getLocal() << " vs " << partidos[i].getVisitante() << endl;
+        cout << partidos[i].getResult() << endl;
     }
 }

@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>   
-#include "Mister.h"
+//#include "Mister.h"
 #include "Jugador.h"
 #include "Partido.h"
 
@@ -11,6 +11,7 @@ class Equipo {
         vector<Jugador> jugadores;
         vector<Partido> partidos;
     public: 
-        Equipo(string name, Mister mister, vector<Jugador> jugadores, vector<Partido> partidos);
+        Equipo(string name, Mister mister, vector<Partido> partidos);
+        void checkPositions(vector<Jugador> jugadores);
         void getTeamGames();
 };

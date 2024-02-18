@@ -1,11 +1,14 @@
 #include <string>
+#include "Equipo.h"
 class Partido{
     private:
-        string resultado;
+        int[2] resultado = {0,0};
+        Equipo local;
+        Equipo visitante;
     public:
-        Partido();
-        void setResultado(string resultado);
+        Partido(Equipo local, Equipo visitante);
+        void score(Equipo equipo);
         string getResultado();
-        void jugarPartido();
+        //void jugarPartido();
         void acabarPartido();
 };

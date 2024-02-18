@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
+#include "Equipo.h"
+#include "Jugador.h"
 class Mister{
     private: 
         string name;
-        int team;
+        Equipo team;
     public:
-        Mister(string name, int team){
-        }
-        void addPlayer(){
-            
-        }
+        Mister(string name);
+        void addPlayer(Jugador player);
+        void coachTeam(Equipo team);
 };
