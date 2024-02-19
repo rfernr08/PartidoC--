@@ -12,6 +12,7 @@ class Equipo {
         vector<Partido> partidos;
     public: 
         Equipo(string name, Mister mister, vector<Partido> partidos);
-        void checkPositions(vector<Jugador> jugadores);
+        void checkPositions();
+        void addGameRecord(Partido partido);
         void getTeamGames();
 };

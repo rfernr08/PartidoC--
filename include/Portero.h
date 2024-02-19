@@ -5,13 +5,13 @@
 class Portero : public Jugador{
     private:
         string name;
-        int team;
+        string team;
         int position;
         bool hasBall;
         int saveHability;
         int passHability;
     public:
-        Portero(string name, int team);
+        Portero(string);
         int save();
         int pass();
 };

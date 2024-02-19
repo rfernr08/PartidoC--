@@ -5,13 +5,13 @@
 class Delantero : public Jugador{
     private:
         string name;
-        int team;
+        string team;
         int position;
         bool hasBall;   
         int shootHability;
         int dribleHability;
     public:
-        Delantero(string name, int team);                                  
+        Delantero(string name);                                  
         int shoot();
         int dribble();
 };

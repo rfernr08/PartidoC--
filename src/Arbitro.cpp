@@ -2,20 +2,29 @@
 #include <iostream>
 using namespace std;
 
+Arbitro::Arbitro(string name)
+{
+    this->name = name;
+}
+
 void Arbitro::shootAtGoal(Jugador striker, Jugador goalkeeper)
 {
     if (striker.shoot() > goalkeeper.save())
     {
-        goal();
+        goal(striker.getTeam());
+        goalkeeper.dejarBalon();
     }
     else
     {
+        striker.dejarBalon();
+        goalkeeper.recibirBalon();
         // El balón pasa a ser del portero
     }
 }
 
-void Arbitro::goal()
+void Arbitro::goal(Equipo team)
 {
+    score(team);
     cout << "¡Gol!" << endl;
 }
 

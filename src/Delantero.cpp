@@ -2,7 +2,7 @@
 #include <string>
 #include "Delantero.h"
 
-Delantero::Delantero(string name, int team){
+Delantero::Delantero(string name){
     this->name = name;
     this->team = team;
     this->position = 4;

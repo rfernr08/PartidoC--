@@ -2,7 +2,7 @@
 #include <string>
 #include "Medio.h"
 
-Medio::Medio(string name, int team){
+Medio::Medio(string name){
     this->name = name;
     this->team = team;
     this->position = 2;

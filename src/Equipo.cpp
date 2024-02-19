@@ -7,10 +7,11 @@
 Equipo::Equipo(string name, Mister mister, vector<Partido> partidos){
     this->name_ = name;
     this->mister = mister;
+    mister.coachTeam(this);
     this->partidos = partidos;
 }
 
-void Equipo::checkPositions(vector<Jugador> jugadores){
+void Equipo::checkPositions(){
     vector<Jugador> jugadores_ = jugadores;
     bool hasPortero = false;
     bool hasDefensa = false;
@@ -42,4 +43,8 @@ void Equipo::getTeamGames(){
     for(int i = 0; i < partidos.size(); i++){
         cout << partidos[i].getResult() << endl;
     }
+}
+
+void Equipo::addGameRecord(Partido partido){
+    this->partidos.push_back(partido);
 }

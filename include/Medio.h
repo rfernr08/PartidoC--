@@ -5,13 +5,13 @@
 class Medio : public Jugador{
     private:
         string name;
-        int team;
+        string team;
         int position;
         bool hasBall;
         int dribleHability;
         int passHability;
     public:
-        Medio(string name, int team);
+        Medio(string name);
         int drible();
         int pass();
 };

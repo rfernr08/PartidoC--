@@ -1,9 +1,11 @@
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Jugador{
     private:
         string name;
-        int team;
+        string team;
         int position;   
         bool hasBall;
     public:
@@ -16,5 +18,6 @@ class Jugador{
         int dribble();
         int save();
         int getTeam();
+        //void setTeam(int team);
         int getPosition();
 };

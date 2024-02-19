@@ -5,13 +5,13 @@
 class Defensa : public Jugador{
     private:
         string name;
-        int team;
+        string team;
         int position;
         bool hasBall;
         int tackleHability;
         int passHability;
     public:
-        Defensa(string name, int team);
+        Defensa(string name);
         int tackle();
         int pass();
 };

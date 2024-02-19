@@ -2,7 +2,7 @@
 #include <string>
 #include "Defensa.h"
 
-Defensa::Defensa(string name, int team){
+Defensa::Defensa(string name){
     this->name = name;
     this->team = team;
     this->position = 2;
