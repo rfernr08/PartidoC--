@@ -3,17 +3,17 @@
 #include "Defensa.h"
 
 Defensa::Defensa(string name){
-    this->name = name;
-    this->team = team;
-    this->position = 2;
-    this->tackleHability = generarStat();
-    this->passHability = generarStat();
+    this->name_ = name;
+    this->team: = team;
+    this->position_ = 2;
+    this->tackleHability_ = generarStat();
+    this->passHability_ = generarStat();
 }
 
 int Defensa::tackle(){
-    return this->tackleHability;
+    return tackleHability_;
 }
 
 int Defensa::pass(){
-    return this->passHability;
+    return passHability_;
 }

@@ -6,12 +6,12 @@
 
 class Defensa : public Jugador{
     private:
-        string name;
-        string team;
-        int position;
-        shared_ptr<Ball> ball;
-        int tackleHability;
-        int passHability;
+        string name_;
+        Equipo team_;
+        int position_;
+        shared_ptr<Ball> ball_;
+        int tackleHability_;
+        int passHability_;
     public:
         Defensa(string name);
         int tackle();
