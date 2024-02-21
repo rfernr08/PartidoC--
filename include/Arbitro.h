@@ -1,7 +1,8 @@
 #include "Jugador.h"
+#include <string>
 class Arbitro{
     private:
-        string name;
+        string name_;
     public:
         Arbitro(string name);
         void shootAtGoal(Jugador striker, Jugador goalkeeper);

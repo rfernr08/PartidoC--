@@ -1,23 +1,36 @@
 #include <iostream>
 #include <string>
+#include <memory>
 #include "Jugador.h"
+#include "Balon.h"
 
 int Jugador::generarStat(){
     return rand() %5 + 1;
 }
 
-void Jugador::recibirBalon(){
-    this->hasBall = true;
+void Jugador::receiveBall(shared_ptr<Ball> newBall) {
+    ball_ = newBall;
 }
 
-void Jugador::dejarBalon(){
-    this->hasBall = false;
+shared_ptr<Ball> Jugador::leaveBall() {
+    shared_ptr<Ball> tempBall = ball;
+    ball_ = nullptr;
+    return tempBall;
 }
 
 int Jugador::getPosition(){
-    return this->position;
+    return position_;
 }
 
-int Jugador::getTeam(){
-    return this->team;
+string Jugador::getTeam(){
+    return team_;
 }
+
+bool Jugador::hasBall(){
+    return ball_ != nullptr;
+}
+
+Equipo Jugador::getTeam(){
+    return team_;
+}
+
