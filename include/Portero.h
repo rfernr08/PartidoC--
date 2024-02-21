@@ -4,14 +4,14 @@
 
 class Portero : public Jugador{
     private:
-        string name;
-        string team;
-        int position;
-        bool hasBall;
-        int saveHability;
-        int passHability;
+        string name_;
+        Equipo team_;
+        int position_;
+        shared_ptr<Ball> ball_;
+        int saveHability_;
+        int passHability_;
     public:
-        Portero(string);
+        Portero(string name);
         int save();
         int pass();
 };

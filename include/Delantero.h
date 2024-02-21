@@ -4,12 +4,12 @@
 
 class Delantero : public Jugador{
     private:
-        string name;
-        string team;
-        int position;
-        bool hasBall;   
-        int shootHability;
-        int dribleHability;
+        string name_;
+        Equipo team_;
+        int position_;  
+        shared_ptr<Ball> ball_;
+        int shootHability_;
+        int dribleHability_;
     public:
         Delantero(string name);                                  
         int shoot();

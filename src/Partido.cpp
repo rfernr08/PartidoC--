@@ -1,9 +1,8 @@
 #include "Partido.h"
 
 Partido::Partido(Equipo local, Equipo visitante, Arbitro arbitro){
-    this->local = local;
-    this->visitante = visitante;
-    this->arbitro = arbitro;
+    this->local_ = local;
+    this->visitante_ = visitante;
 }
 
 void Partido::score(Equipo equipo){
@@ -20,12 +19,12 @@ string Partido::getResult(){
 
 void Partido::acabarPartido(){
     if(resultado[0] > resultado[1]){
-        local.addGameRecord(this);
-        visitante.addGameRecord(this);
-        cout << "El equipo local ha ganado-" << local.getName() << endl;
+        local_.addGameRecord(this);
+        visitante_.addGameRecord(this);
+        cout << "El equipo local ha ganado-" << local_.getName() << endl;
     }else{
-        visitante.addGameRecord(this);
-        local.addGameRecord(this);
-        cout << "El equipo visitante ha ganado-" << visitante.getName() << endl;
+        visitante_.addGameRecord(this);
+        local_.addGameRecord(this);
+        cout << "El equipo visitante ha ganado-" << visitante_.getName() << endl;
     }
 }

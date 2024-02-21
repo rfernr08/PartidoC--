@@ -1,18 +1,19 @@
 #include <string>
 #include <vector>   
 //#include "Mister.h"
-#include "Jugador.h"
+//#include "Jugador.h"
 #include "Partido.h"
 
 class Equipo {
     private:
         string name_;
-        Mister mister;
-        vector<Jugador> jugadores;
-        vector<Partido> partidos;
+        Mister mister_;
+        vector<Jugador> jugadores_;
+        vector<Partido> partidos_;
     public: 
-        Equipo(string name, Mister mister, vector<Partido> partidos);
+        Equipo(string name);
         void checkPositions();
         void addGameRecord(Partido partido);
         void getTeamGames();
+        void asignMister(Mister mister);
 };

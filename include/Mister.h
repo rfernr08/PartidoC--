@@ -4,8 +4,8 @@
 #include "Jugador.h"
 class Mister{
     private: 
-        string name;
-        Equipo team;
+        string name_;
+        Equipo team_;
     public:
         Mister(string name);
         void addPlayer(Jugador player);

@@ -3,15 +3,15 @@
 #include "Delantero.h"
 
 Delantero::Delantero(string name){
-    this->name = name;
-    this->team = team;
-    this->position = 4;
-    this->shootHability = generarStat();
-    this->dribleHability = generarStat();
+    this->name_ = name;
+    this->team_ = team;
+    this->position_ = 4;
+    this->shootHability_ = generarStat();
+    this->dribleHability_ = generarStat();
 }                                   
 int Delantero::shoot(){
-    return this->shootHability; 
+    return this->shootHability_; 
 }
 int Delantero::dribble(){
-    return this->dribleHability;
+    return this->dribleHability_;
 }

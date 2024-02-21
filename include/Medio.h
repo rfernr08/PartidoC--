@@ -4,12 +4,12 @@
 
 class Medio : public Jugador{
     private:
-        string name;
-        string team;
-        int position;
-        bool hasBall;
-        int dribleHability;
-        int passHability;
+        string name_;
+        Equipo team_;
+        int position_;
+        shared_ptr<Ball> ball_;
+        int dribleHability_;
+        int passHability_;
     public:
         Medio(string name);
         int drible();
